@@ -27,7 +27,7 @@ function getCurrentWeather(city) {
     });
 }
 
-// if the city isn't found or data doesnt read 200 which is 'OK' or 'success' it returns
+// if the city isn't found or data doesn't read 200 which is 'OK' or 'success' it returns
 function updateUI(data) {
   if (!data || data.cod !== 200) {
     alert("City not found!");
