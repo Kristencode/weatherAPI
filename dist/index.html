@@ -3,81 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>weatherAPI</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/d833ed1dfe.js" crossorigin="anonymous"></script>
   </head>
-  <body>
-    <div class="container">
-      <div class="weather-header">
-        <form action="" class="weather-search">
-          <input type="text" placeholder="Search for a city" class="weather-searchForm">
-          <i class="fa-solid fa-magnifying-glass"></i>
+  <body
+    class="bg-cover bg-center bg-no-repeat min-h-screen flex items-center justify-center p-4"
+    style="background-image: linear-gradient(to bottom right, rgba(219,234,254,0.8), rgba(254,249,195,0.8)), url('https://source.unsplash.com/1600x900/?sky,weather');"
+  >
+  <div
+  class="bg-cover bg-center bg-no-repeat max-w-xl w-full p-6 rounded-2xl shadow-lg space-y-6"
+  style="background-image: url('https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?auto=compress&cs=tinysrgb&w=400');"
+>
+
+      <!-- Header -->
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-4 sm:space-y-0">
+        <form action="" class="flex items-center w-full gap-2">
+          <input
+            type="text"
+            placeholder="Search for a city"
+            class="flex-1 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 hover:ring-blue-400"
+          />
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass text-xl text-white hover:text-gray-300"></i>
+          </button>
         </form>
-        <div class="weather-units">
-          <span class="weather-unit-celcius">
-            &#176C
-          </span>
-          <span class="weather-unit-fahrenheit">
-            &#176F
-          </span>
+        <div class="flex gap-3 text-lg font-semibold text-white">
+          <span class="cursor-pointer hover:text-blue-600">&#176;C</span>
+          <span class="cursor-pointer hover:text-blue-600">&#176;F</span>
         </div>
       </div>
 
-      <div class="weather-body">
-        <h1 class="weather-city">JOS, NG</h1>
-        <div class="weather-datetime">
-          <p>Saturday 10 May 2025 09:32AM</p>
-        </div>
-        <div class="weather-forecast">
-          <p>Clear</p>
-        </div>
-        <div class="weather-icon">
-          <img src="http://openweathermap.org/img/wn/10d@4x.png" alt="">
-        </div>
-        <p class="weather-temperature">
-          18&#176
-        </p>
-        <div class="weather-minmax">
-          <p>Min 12&#176</p>
-          <p>Max 16&#176</p>
+      <!-- Weather Body -->
+      <div class="text-center space-y-2">
+        <h1 class="text-3xl font-bold uppercase text-white">JOS, NG</h1>
+        <p class="text-sm text-white">Saturday 10 May 2025 09:32AM</p>
+        <p class="text-xl text-white  font-semibold">Clear</p>
+        <img src="http://openweathermap.org/img/wn/10d@4x.png" class="mx-auto w-28 h-28" alt="Weather Icon" />
+        <p class="text-6xl font-bold text-white">18&#176;</p>
+        <div class="flex justify-center gap-6 text-white text-sm">
+          <p>Min 12&#176;</p>
+          <p>Max 16&#176;</p>
         </div>
       </div>
 
-      <div class="weather-info">
-        <div class="weather-card">
-          <i class="fa-solid fa-temperature-full"></i>
+      <!-- Weather Info Cards -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="flex items-center gap-3 bg-gray-100 p-4 rounded-lg shadow">
+          <i class="fa-solid fa-temperature-full text-xl text-blue-500"></i>
           <div>
-            <p>Real Feel</p>
-            <p class="weather-realfeal">18&#176</p>
+            <p class="text-sm text-gray-600">Real Feel</p>
+            <p class="font-bold text-gray-700">18&#176;</p>
           </div>
         </div>
 
-        <div class="weather-card">
-          <i class="fa-solid fa-droplet"></i>
+        <div class="flex items-center gap-3 bg-gray-100 p-4 rounded-lg shadow">
+          <i class="fa-solid fa-droplet text-xl text-purple-500"></i>
           <div>
-            <p>Humidity</p>
-            <p class="weather-humidity">18&#176</p>
+            <p class="text-sm text-gray-600">Humidity</p>
+            <p class="font-bold text-gray-700">18&#176;</p>
           </div>
         </div>
 
-        <div class="weather-card">
-          <i class="fa-solid fa-wind"></i>
+        <div class="flex items-center gap-3 bg-gray-100 p-4 rounded-lg shadow">
+          <i class="fa-solid fa-wind text-xl text-green-500"></i>
           <div>
-            <p>Wind</p>
-            <p class="weather-wind">18&#176</p>
+            <p class="text-sm text-gray-600">Wind</p>
+            <p class="font-bold text-gray-700">18&#176;</p>
           </div>
         </div>
 
-        <div class="weather-card">
-          <i class="fa-solid fa-gauge-high"></i>
+        <div class="flex items-center gap-3 bg-gray-100 p-4 rounded-lg shadow">
+          <i class="fa-solid fa-gauge-high text-xl text-red-500"></i>
           <div>
-            <p>Pressure</p>
-            <p class="weather-pressure">18&#176</p>
+            <p class="text-sm text-gray-600">Pressure</p>
+            <p class="font-bold text-gray-700">18&#176;</p>
           </div>
         </div>
       </div>
     </div>
-    
-    <script src="https://kit.fontawesome.com/d833ed1dfe.js" crossorigin="anonymous"></script>
   </body>
 </html>
