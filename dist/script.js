@@ -159,7 +159,7 @@ function updateTemperatures() {
   }
 }
 
-// Toggle temperature unit
+// Toggle temperature unit between Celsius or Fahrenheit highlighted in blue for specific clicks
 document.querySelectorAll(".unit-toggle").forEach(function (span) {
   span.addEventListener("click", function (e) {
     isCelsius = e.target.dataset.unit === "C";
