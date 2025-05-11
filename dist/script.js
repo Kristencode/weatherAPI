@@ -184,12 +184,12 @@ function updateBackground(temp, weatherMain) {
   let videoUrl = "";
   // Check for rainy conditions first
   if (["rain", "drizzle"].includes(weatherMain.toLowerCase())) {
-    videoUrl = "https://videos.pexels.com/video-files/1525286/1525286-hd_1920_1080_30fps.mp4"; // Rain video
+    videoUrl = "https://videos.pexels.com/video-files/29392056/12660201_1440_2560_32fps.mp4"; // Rain video
   } else {
     // Temperature-based videos
     if (temp < 0) {
       // Extreme cold: Snow
-      videoUrl = "https://videos.pexels.com/video-files/7442203/7442203-hd_1920_1080_25fps.mp4"; // Snow video
+      videoUrl = "https://videos.pexels.com/video-files/855614/855614-uhd_2560_1440_25fps.mp4"; // Snow video
     } else if (temp >= 0 && temp < 10) {
       // Cold: Frosty/windy
       videoUrl = "https://videos.pexels.com/video-files/30884246/13205726_2560_1440_30fps.mp4"; // Frosty video
