@@ -168,7 +168,7 @@ document.querySelectorAll(".unit-toggle").forEach(function (span) {
       s.classList.toggle("text-white", s.dataset.unit !== (isCelsius ? "C" : "F"));
     });
     if (currentData) {
-      updateUI(currentData); // Refresh UI with new unit
+      updateUI(currentData); // Refresh User Interface with new unit
     }
   });
 });
@@ -181,31 +181,32 @@ function updateBackground(temp, weatherMain) {
     return;
   }
 
+  //Route and match appropriate URL to designated weather condition
   let videoUrl = "";
   // Check for rainy conditions first
   if (["rain", "drizzle"].includes(weatherMain.toLowerCase())) {
-    videoUrl = "https://videos.pexels.com/video-files/29392056/12660201_1440_2560_32fps.mp4"; // Rain video
+    videoUrl = "https://videos.pexels.com/video-files/29392056/12660201_1440_2560_32fps.mp4"; // Rain video url
   } else {
     // Temperature-based videos
     if (temp < 0) {
-      // Extreme cold: Snow
-      videoUrl = "https://videos.pexels.com/video-files/855614/855614-uhd_2560_1440_25fps.mp4"; // Snow video
+      // Extreme cold => Snow
+      videoUrl = "https://videos.pexels.com/video-files/855614/855614-uhd_2560_1440_25fps.mp4"; // Snow video url
     } else if (temp >= 0 && temp < 10) {
-      // Cold: Frosty/windy
-      videoUrl = "https://videos.pexels.com/video-files/30884246/13205726_2560_1440_30fps.mp4"; // Frosty video
+      // Cold => Frosty/windy
+      videoUrl = "https://videos.pexels.com/video-files/30884246/13205726_2560_1440_30fps.mp4"; // Frosty video url
     } else if (temp >= 10 && temp < 20) {
-      // Cool: Cloudy
-      videoUrl = "https://videos.pexels.com/video-files/4211579/4211579-hd_1920_1080_30fps.mp4"; // Cloudy video
+      // Cool => Cloudy
+      videoUrl = "https://videos.pexels.com/video-files/4211579/4211579-hd_1920_1080_30fps.mp4"; // Cloudy video url
     } else if (temp >= 20 && temp < 30) {
-      // Warm: Sunny
-      videoUrl = "https://videos.pexels.com/video-files/2935032/2935032-uhd_2560_1440_30fps.mp4"; // Sunny video
+      // Warm => Sunny
+      videoUrl = "https://videos.pexels.com/video-files/2935032/2935032-uhd_2560_1440_30fps.mp4"; // Sunny video url
     } else {
-      // Hot: Desert/heat
-      videoUrl = "https://videos.pexels.com/video-files/7895576/7895576-hd_1920_1080_30fps.mp4"; // Desert video
+      // Hot => Desert/heat
+      videoUrl = "https://videos.pexels.com/video-files/7895576/7895576-hd_1920_1080_30fps.mp4"; // Desert video url
     }
   }
 
-  // Apply video with smooth transition
+  //Video with smooth transition
   videoElement.classList.add("opacity-0"); // Fade out
   setTimeout(function () {
     videoElement.src = videoUrl;
